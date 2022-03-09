@@ -1,6 +1,7 @@
 body {
   background-color: #d6eefe;
   font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
 }
 
 h1 {
@@ -24,7 +25,8 @@ h1 {
   border-radius: 5%;
   box-shadow: 5px 4px 8px 2px #bebebe;
   min-height: 500px;
-  min-width: 300px;
+  min-width: 350px;
+  max-width: 350px;
   position: relative;
   top: 55px;
   display: flex;
@@ -56,24 +58,20 @@ h1 {
   border-bottom-style: dotted;
   border-color: #bebebe;
   font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   outline: none;
-  width: 35%;
+  text-align: center;
 }
 
 .list-input button {
   background-color: transparent;
   border-color: #bde3ff;
   border-radius: 100%;
-  margin-left: 10px;
-}
-
-.list-container p {
-  font-weight: bold;
-  text-align: center;
+  margin-left: 15px;
 }
 
 .list-item {
-  display: grid;
+  display: flex;
   grid-template-columns: 4fr 1fr;
   grid-template-areas: "text button";
   margin-bottom: 10px;
@@ -81,13 +79,15 @@ h1 {
 
 .item-text {
   grid-area: "text";
+  word-wrap: break-all;
 }
 
 .item-buttons {
   display: grid;
-  align-content: center;
   grid-template-columns: 1fr 1fr;
   grid-area: "button";
+  justify-self: right;
+  margin: 0px 10px;
 }
 
 .item-buttons input {
