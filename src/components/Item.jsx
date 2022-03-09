@@ -8,20 +8,20 @@ export default function Item(props) {
   }
 
   return (
-    <div classList="container">
-      <div className="list-item">
+    <div className="list-item">
+      <div className="item-text">
         <li style={{ textDecorationLine: isComplete && "line-through" }}>
           {props.text}
         </li>
       </div>
-      <div>
+      <div className="item-buttons">
         <input type="checkbox" onClick={strike} />
         <button
           onClick={() => {
             props.onDelete(props.id);
           }}
         >
-          deleteicon
+          x
         </button>
       </div>
     </div>

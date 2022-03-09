@@ -22,19 +22,25 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="header">
-        <h1>To Do List</h1>
+      <div className="list-container">
+        <div className="list-title">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3208/3208676.png"
+            alt=""
+          />
+          <h1>To-Do</h1>
+        </div>
+        <Input onAdd={addItem} />
+        <ul>
+          {itemList.length === 0 && <p>all done! :)</p>}
+          {itemList.map((item, index) => {
+            let newKey = uuidv4();
+            return (
+              <Item key={newKey} id={index} text={item} onDelete={deleteItem} />
+            );
+          })}
+        </ul>
       </div>
-      <Input onAdd={addItem} />
-      <ul>
-        {itemList.length === 0 && <Item text="all done! :)" />}
-        {itemList.map((item, index) => {
-          let newKey = uuidv4();
-          return (
-            <Item key={newKey} id={index} text={item} onDelete={deleteItem} />
-          );
-        })}
-      </ul>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Input(props) {
   }
 
   return (
-    <div className="input">
+    <div className="list-input">
       <input
         onChange={handleChange}
         placeholder="thing to do!"
