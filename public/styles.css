@@ -86,7 +86,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-area: "button";
-  margin: 0px 10px;
+  grid-gap: 5px;
+  margin: 0px 10px 0px 15px;
   margin-bottom: auto;
 }
 

@@ -14,9 +14,21 @@ export default function Input(props) {
     setInputText(newText);
   }
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      props.onAdd(inputText);
+    }
+  }
+
   return (
     <div className="list-input">
-      <input onChange={handleChange} type="text" value={inputText} />
+      <input
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
+        id="itemInput"
+        type="text"
+        value={inputText}
+      />
       <button
         onClick={() => {
           props.onAdd(inputText);
