@@ -14,7 +14,7 @@ h1 {
   justify-content: center;
 }
 
-.clock-container {
+.time-container {
   position: absolute;
   right: 15px;
   top: 0;
@@ -86,8 +86,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-area: "button";
-  justify-self: right;
   margin: 0px 10px;
+  margin-bottom: auto;
 }
 
 .item-buttons input {

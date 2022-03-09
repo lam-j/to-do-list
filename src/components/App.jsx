@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Input from "./Input";
 import Item from "./Item";
-import { v4 as uuidv4 } from "uuid";
+import Time from "./Time";
 
 export default function App() {
   const [itemList, setItemList] = useState([]);
-  const currentTime = new Date().toLocaleTimeString();
-  const [time, setTime] = useState(currentTime);
-
-  function getTime() {
-    const newTime = new Date().toLocaleTimeString();
-    setTime(newTime);
-  }
-
-  // setInterval(getTime, 1000);
 
   function addItem(item) {
     if (item !== "") {
@@ -33,8 +25,8 @@ export default function App() {
 
   return (
     <div className="container">
-      <div className="clock-container">
-        <h1>{time}</h1>
+      <div className="time-container">
+        <Time />
       </div>
       <div className="list-container">
         <div className="list-title">

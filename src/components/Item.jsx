@@ -15,7 +15,7 @@ export default function Item(props) {
         </li>
       </div>
       <div className="item-buttons">
-        <input type="checkbox" onClick={strike} />
+        <button onClick={strike}>-</button>
         <button
           onClick={() => {
             props.onDelete(props.id);
