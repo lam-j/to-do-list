@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useState } from "react";
+// import { v4 as uuidv4 } from "uuid";
 import Input from "./Input";
 import Item from "./Item";
 import Time from "./Time";
@@ -36,9 +36,9 @@ export default function App() {
         <ul>
           {/* {itemList.length === 0 && <p>all done! :)</p>} */}
           {itemList.map((item, index) => {
-            let newKey = uuidv4();
+            // let newKey = uuidv4();
             return (
-              <Item key={newKey} id={index} text={item} onDelete={deleteItem} />
+              <Item key={index} id={index} text={item} onDelete={deleteItem} />
             );
           })}
         </ul>
