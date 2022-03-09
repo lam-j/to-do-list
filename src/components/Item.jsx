@@ -15,7 +15,7 @@ export default function Item(props) {
         </li>
       </div>
       <div className="item-buttons">
-        <button onClick={strike}>✓</button>
+        <button onClick={strike}>-</button>
         <button
           onClick={() => {
             props.onDelete(props.id);

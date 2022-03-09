@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import InputButton from "./InputButton";
 
 export default function Input(props) {
   /* two things to do:
@@ -18,7 +17,14 @@ export default function Input(props) {
   return (
     <div className="list-input">
       <input onChange={handleChange} type="text" value={inputText} />
-      <InputButton onAdd={addItem} />
+      <button
+        onClick={() => {
+          props.onAdd(inputText);
+          setInputText("");
+        }}
+      >
+        +
+      </button>
     </div>
   );
 }
