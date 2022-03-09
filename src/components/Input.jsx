@@ -16,12 +16,7 @@ export default function Input(props) {
 
   return (
     <div className="list-input">
-      <input
-        onChange={handleChange}
-        placeholder="thing to do!"
-        type="text"
-        value={inputText}
-      />
+      <input onChange={handleChange} type="text" value={inputText} />
       <button
         onClick={() => {
           props.onAdd(inputText);

@@ -1,6 +1,6 @@
 body {
-  background-color: #d4edff;
-  font-family: sans-serif;
+  background-color: #d6eefe;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h1 {
 }
 
 .clock-container {
-  position: fixed;
+  position: absolute;
   right: 15px;
   top: 0;
 }
@@ -23,10 +23,10 @@ h1 {
   background-color: #f8f8f8;
   border-radius: 5%;
   box-shadow: 5px 4px 8px 2px #bebebe;
-  min-height: 300px;
+  min-height: 500px;
   min-width: 300px;
   position: relative;
-  top: 50px;
+  top: 55px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -37,16 +37,13 @@ h1 {
 }
 
 .list-title img {
-  height: 120px;
-  width: auto;
+  height: 125px;
+  width: 170px;
 }
 
 .list-title h1 {
   color: #bebebe;
   font-family: "Titan One", cursive;
-  position: absolute;
-  top: 35px;
-  left: 96px;
 }
 
 .list-input {
@@ -58,29 +55,39 @@ h1 {
   border-style: none;
   border-bottom-style: dotted;
   border-color: #bebebe;
+  font-family: "Montserrat", sans-serif;
   outline: none;
-  text-align: center;
+  width: 35%;
 }
 
 .list-input button {
   background-color: transparent;
-  border-color: #bebebe;
+  border-color: #bde3ff;
   border-radius: 100%;
+  margin-left: 10px;
 }
 
 .list-container p {
   font-weight: bold;
+  text-align: center;
 }
 
 .list-item {
-  display: flex;
-  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "text button";
+  margin-bottom: 10px;
 }
 
 .item-text {
+  grid-area: "text";
 }
 
 .item-buttons {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-area: "button";
 }
 
 .item-buttons input {
@@ -88,6 +95,9 @@ h1 {
 
 .item-buttons button {
   background-color: transparent;
+  border-color: #bde3ff;
+  border-radius: 100%;
+  font-size: 12px;
 }
 /* 
 .list-item:hover + .item-buttons button,

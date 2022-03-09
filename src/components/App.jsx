@@ -13,7 +13,7 @@ export default function App() {
     setTime(newTime);
   }
 
-  setInterval(getTime, 1000);
+  // setInterval(getTime, 1000);
 
   function addItem(item) {
     setItemList((previousItems) => {
@@ -31,17 +31,16 @@ export default function App() {
 
   return (
     <div className="container">
+      <div className="clock-container">
+        <h1>{time}</h1>
+      </div>
       <div className="list-container">
         <div className="list-title">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3208/3208676.png"
-            alt=""
-          />
           <h1>To-Do</h1>
         </div>
         <Input onAdd={addItem} />
         <ul>
-          {itemList.length === 0 && <p>all done! :)</p>}
+          {/* {itemList.length === 0 && <p>all done! :)</p>} */}
           {itemList.map((item, index) => {
             let newKey = uuidv4();
             return (
@@ -49,9 +48,6 @@ export default function App() {
             );
           })}
         </ul>
-      </div>
-      <div className="clock-container">
-        <h1>{time}</h1>
       </div>
     </div>
   );
