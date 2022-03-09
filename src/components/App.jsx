@@ -5,6 +5,15 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function App() {
   const [itemList, setItemList] = useState([]);
+  const currentTime = new Date().toLocaleTimeString();
+  const [time, setTime] = useState(currentTime);
+
+  function getTime() {
+    const newTime = new Date().toLocaleTimeString();
+    setTime(newTime);
+  }
+
+  setInterval(getTime, 1000);
 
   function addItem(item) {
     setItemList((previousItems) => {
@@ -40,6 +49,9 @@ export default function App() {
             );
           })}
         </ul>
+      </div>
+      <div className="clock-container">
+        <h1>{time}</h1>
       </div>
     </div>
   );

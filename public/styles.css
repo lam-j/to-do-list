@@ -1,15 +1,29 @@
 body {
   background-color: #d4edff;
   font-family: sans-serif;
+}
+
+h1 {
+  color: #bebebe;
+  font-family: "Titan One", cursive;
+}
+
+.container {
   display: flex;
   justify-content: center;
+}
+
+.clock-container {
+  position: fixed;
+  right: 15px;
+  top: 0;
 }
 
 .list-container {
   background-color: #f8f8f8;
   border-radius: 5%;
   box-shadow: 5px 4px 8px 2px #bebebe;
-  min-height: 500px;
+  min-height: 300px;
   min-width: 300px;
   position: relative;
   top: 50px;
