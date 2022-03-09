@@ -16,9 +16,11 @@ export default function App() {
   // setInterval(getTime, 1000);
 
   function addItem(item) {
-    setItemList((previousItems) => {
-      return [...previousItems, item];
-    });
+    if (item !== "") {
+      setItemList((previousItems) => {
+        return [...previousItems, item];
+      });
+    }
   }
 
   function deleteItem(id) {
