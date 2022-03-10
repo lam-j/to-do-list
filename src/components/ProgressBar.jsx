@@ -9,7 +9,7 @@ export default function ProgressBar() {
           style={{ backgroundColor: document.body.style.backgroundColor }}
         ></span>
       </div>
-      <p>80%</p>
+      <p>80% complete</p>
     </div>
   );
 }
