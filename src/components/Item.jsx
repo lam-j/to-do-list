@@ -15,11 +15,17 @@ export default function Item(props) {
         </li>
       </div>
       <div className="item-buttons">
-        <button onClick={strike}>✓</button>
+        <button
+          onClick={strike}
+          style={{ borderColor: document.body.style.backgroundColor }}
+        >
+          ✓
+        </button>
         <button
           onClick={() => {
             props.onDelete(props.id);
           }}
+          style={{ borderColor: document.body.style.backgroundColor }}
         >
           x
         </button>

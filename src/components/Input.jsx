@@ -34,6 +34,7 @@ export default function Input(props) {
           props.onAdd(inputText);
           setInputText("");
         }}
+        style={{ borderColor: document.body.style.backgroundColor }}
       >
         +
       </button>

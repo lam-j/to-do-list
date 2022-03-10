@@ -9,6 +9,10 @@ h1 {
   font-family: "Titan One", cursive;
 }
 
+button:hover {
+  opacity: 0.6;
+}
+
 .container {
   display: grid;
   justify-content: center;
