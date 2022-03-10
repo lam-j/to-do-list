@@ -40,27 +40,28 @@ button:hover {
 .progress-container {
   position: absolute;
   right: 100px;
-  top: 92px;
-  text-align: center;
-  width: 165px;
-}
-
-.progress-total {
-  background-color: #bebebe;
-  border-color: white;
-  /* border-radius: 10% / 50%; */
-  border-style: solid;
-  height: 30px;
-  width: 100%;
+  top: 93px;
 }
 
 .progress-bar {
-  background-color: #d6eefe;
-  border-color: white;
-  /* border-radius: 10% / 50%; */
+  background-color: #bebebe;
+  border-color: #ffffff;
+  border-radius: 25px;
   border-style: solid;
   height: 30px;
-  width: 100%;
+  width: 200px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #d6eefe;
+  border-radius: 25px;
+  position: relative;
+  opacity: 75%;
+}
+
+.progress-container p {
 }
 
 .list-container {

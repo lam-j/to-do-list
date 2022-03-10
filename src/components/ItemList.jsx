@@ -12,6 +12,7 @@ export default function ItemList(props) {
             id={index}
             text={item}
             onDelete={props.onDelete}
+            onChange={props.onChange}
           />
         );
       })}

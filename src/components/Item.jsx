@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 export default function Item(props) {
   const [isComplete, setIsComplete] = useState(false);
+  // const [strikeCount, setStrikeCount] = useState(0);
+
+  // var strikeCount = useMemo(() => return )
 
   function strike() {
     setIsComplete(!isComplete);
+    if (isComplete) {
+      // setStrikeCount(strikeCount + 1);
+      setIsComplete(!isComplete);
+    }
+    console.log(strikeCount);
   }
 
   return (
@@ -16,7 +24,9 @@ export default function Item(props) {
       </div>
       <div className="item-buttons">
         <button
-          onClick={strike}
+          onClick={() => {
+            strike();
+          }}
           style={{ borderColor: document.body.style.backgroundColor }}
         >
           ✓

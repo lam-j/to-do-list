@@ -8,27 +8,12 @@ import Nav from "./Nav";
 export default function App() {
   const [itemList, setItemList] = useState([]);
 
-  // const [progress, setProgress] = useState(0);
-
-  // function ProgressBar() {
-  //   return (
-  //     <div className="progress-container">
-  //       <div className="progress-bar" style={{ width: progress }}>
-  //         {progress + "%"}
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
-  // function updateBar() {}
-
   function addItem(item) {
     if (item !== "") {
       setItemList((previousItems) => {
         return [...previousItems, item];
       });
     }
-    updateBar(itemList);
   }
 
   function deleteItem(id) {
@@ -54,10 +39,10 @@ export default function App() {
         <ItemList onDelete={deleteItem} itemList={itemList} />
       </div>
       <div className="progress-container">
-        <div className="progress-total">
-          <div className="progress-bar"></div>
+        <div className="progress-bar">
+          <span></span>
         </div>
-        0%
+        %
       </div>
       <div className="nav-container">
         <Nav />
