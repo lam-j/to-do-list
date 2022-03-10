@@ -4,18 +4,26 @@ body {
   font-size: 1rem;
 }
 
-h1 {
+h1,
+.progress-container p {
   color: #bebebe;
   font-family: "Titan One", cursive;
 }
 
-button:hover {
+button:hover,
+.time-container h1:hover {
   opacity: 0.6;
 }
 
 .container {
   display: grid;
   justify-content: center;
+}
+
+.delete-button {
+  position: absolute;
+  right: 420px;
+  bottom: 85px;
 }
 
 .color-container {
@@ -41,6 +49,7 @@ button:hover {
   position: absolute;
   right: 100px;
   top: 93px;
+  text-align: center;
 }
 
 .progress-bar {
@@ -59,9 +68,7 @@ button:hover {
   border-radius: 25px;
   position: relative;
   opacity: 75%;
-}
-
-.progress-container p {
+  width: 80%;
 }
 
 .list-container {
@@ -150,7 +157,8 @@ button:hover {
 }
 
 .nav-button,
-.drop-button {
+.drop-button,
+.delete-button {
   background-color: transparent;
   border-radius: 100%;
   border-style: none;

@@ -8,11 +8,11 @@ export default function Item(props) {
 
   function strike() {
     setIsComplete(!isComplete);
-    if (isComplete) {
-      // setStrikeCount(strikeCount + 1);
-      setIsComplete(!isComplete);
-    }
-    console.log(strikeCount);
+    // if (isComplete) {
+    //   // setStrikeCount(strikeCount + 1);
+    //   setIsComplete(!isComplete);
+    // }
+    // console.log(strikeCount);
   }
 
   return (

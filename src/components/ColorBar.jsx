@@ -6,7 +6,7 @@ export default function ColorBar() {
   }
 
   return (
-    <>
+    <div className="color-container">
       <button
         className="color-button"
         style={{ backgroundColor: "#F0DEFD" }}
@@ -35,6 +35,6 @@ export default function ColorBar() {
           changeColor("#D6EEFE");
         }}
       ></button>
-    </>
+    </div>
   );
 }
