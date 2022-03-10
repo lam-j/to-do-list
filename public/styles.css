@@ -37,8 +37,35 @@ button:hover {
   margin: 5px;
 }
 
+.progress-container {
+  position: absolute;
+  right: 100px;
+  top: 92px;
+  text-align: center;
+  width: 165px;
+}
+
+.progress-total {
+  background-color: #bebebe;
+  border-color: white;
+  /* border-radius: 10% / 50%; */
+  border-style: solid;
+  height: 30px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #d6eefe;
+  border-color: white;
+  /* border-radius: 10% / 50%; */
+  border-style: solid;
+  height: 30px;
+  width: 100%;
+}
+
 .list-container {
   background-color: #f8f8f8;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
   border-radius: 5%;
   box-shadow: 5px 4px 8px 2px #bebebe;
   min-height: 500px;
@@ -49,6 +76,17 @@ button:hover {
   align-content: center;
   text-align: center;
   position: relative;
+  top: 60px;
+}
+
+.highlight {
+  background-color: #d6eefe;
+  height: 10px;
+  width: 150px;
+  opacity: 90%;
+  transform: rotate(-2deg);
+  position: absolute;
+  left: 100px;
   top: 60px;
 }
 
