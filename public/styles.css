@@ -5,9 +5,16 @@ body {
 }
 
 h1,
+footer,
 .progress-container p {
   color: #bebebe;
   font-family: "Titan One", cursive;
+}
+
+footer {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
 }
 
 button:hover,

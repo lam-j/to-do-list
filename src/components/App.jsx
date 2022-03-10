@@ -8,13 +8,19 @@ import ProgressBar from "./ProgressBar";
 import ListContainer from "./ListContainer";
 
 export default function App() {
+  const year = new Date().getFullYear();
   return (
-    <div className="container">
-      <ColorBar />
-      <ListContainer />
-      <ProgressBar />
-      <Nav />
-      <Time />
-    </div>
+    <>
+      <div className="container">
+        <ColorBar />
+        <ListContainer />
+        <ProgressBar />
+        <Nav />
+        <Time />
+      </div>
+      <footer>
+        <p>{year} © lam-j on github </p>
+      </footer>
+    </>
   );
 }
